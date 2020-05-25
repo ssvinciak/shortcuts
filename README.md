@@ -14,3 +14,11 @@ dummy.select();document.execCommand("copy");document.body.removeChild(dummy);
 `
 var links = document.getElementsByTagName("link"); for (var i = 0; i < links.length;i++) { var link = links[i]; if (link.rel === "stylesheet") {link.href += "?"; }}
 `
+
+#### EF
+
+Set db to initial migration
+
+`
+Update-Database -TargetMigration $InitialDatabase; Add-Migration Initial -Force; Update-Database
+`
